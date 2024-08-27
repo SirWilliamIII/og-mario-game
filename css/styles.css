@@ -1,32 +1,21 @@
-html, body, ul, li {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
+/* css/styles.css */
 
-canvas {
-  display: block;
-  width: 762;
-  margin: 0 auto;
-  background-color: blue;
-}
-
-p {
-  text-align: center;
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  overflow: hidden;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
-.info {
-  position: absolute;
-  top: 0;
-  left: 0;
+canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensures the aspect ratio is maintained */
 }
