@@ -6,7 +6,7 @@
 
     <!-- The actual resolution of the NES is 256x240.
          Ideally, we draw in this size and scale appropriately.-->
-    <title>Super Mario</title>
+    <title>Super Mario Bros</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,18 +18,17 @@
             margin: 0;
             padding: 0;
         }
-        
+
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        
-        .info {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
+
+        canvas {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -59,10 +58,12 @@
     <script type="text/javascript" src="js/levels/11.js"></script>
     <script type="text/javascript" src="js/levels/11tunnel.js"></script>
     <script type="text/javascript" src="js/game.js"></script>
-    <div class="info">
-        <p class="controls">Move: Arrow Keys, Jump: X, Run: Z</p>
-    </div>
-
+    <script>
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    </script>
 </body>
 
 </html>
